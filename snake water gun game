@@ -1,0 +1,76 @@
+//use javascript to create a game of snake water and gun.the game should ask you to enter S W OR G. THE COMPUTER SHOULD BE ABLE TO RANDOMNLY GENERATE S W OR G AND DECLARE WIN OR LOSS USING ALERT.USE PROMPT AND CONFIRM WHENEVER REQUIRED
+//SNAKE EATS AWAY WATER
+//WATER EATS AWAY GUN
+//GUN EATS AWAY SNAKE
+
+// we made a for loop five times so we can play the game for five times !!
+
+source code:
+
+for (let i = 0; i <5 ; i++){
+  
+  let o = prompt('enter your player 1: snake 2: water 3: gun');
+  if (o!="snake" && o!="water" &&  o!="gun" ){
+    console.log("you entered wrong");
+  }
+
+ 
+  else{
+let a ;
+switch ( Math.floor(Math.random() * 2) ){
+   
+case 0: 
+  a = "snake";
+    console.log("computer chose" + " " + a+" "+ "so: ");
+    if ( o ==='water'){
+      console.log('you lost ');
+    }
+    if(o === 'gun'){
+      console.log('you win ');
+    }
+    if(o==='snake'){
+      console.log('it is a tie');
+    }
+  else {'you entered a wrong input'}
+break;
+    
+  case 1 : 
+    a = 'water'
+    console.log("computer chose " + "" + a+" "+ "so: ");
+   if ( o =='snake'){
+      console.log('you win ');
+    }
+    if(o == 'gun'){
+      console.log('you lost ');
+    }
+    if(o=='water'){
+      console.log('it is a tie');
+    }
+    else {'you entered a wrong input'}
+    break;
+  case 2 :
+   a = 'gun';
+    console.log("computer chose " + "" + a +" "+ "so: ")
+   if ( o =='water'){
+      console.log('you win ');
+    }
+    if(o == 'gun'){
+      console.log('it is a tie ');
+    }
+    if(o=='snake'){
+      console.log('you lost');
+    }
+   else {'you entered a wrong input'}1
+    
+   
+    break;
+    
+  default: 
+    "error";
+}
+  }
+  
+}
+    
+
+
